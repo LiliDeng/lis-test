@@ -62,7 +62,7 @@ distro="$(head -1 /etc/issue)"
 if [[ ${distro} == *"Ubuntu"* ]]
 then
     sudo apt update
-    sudo apt -y install libaio1 make sysstat zip mysql-client* >> ${LOG_FILE}
+    sudo apt -y install make libaio1 sysstat zip mysql-client* >> ${LOG_FILE}
     sudo apt -y install git automake libtool libmysqlclient-dev -o Acquire::ForceIPv4=true >> ${LOG_FILE}
 
     ssh -T -o StrictHostKeyChecking=no ${USER}@${SERVER} "sudo apt update"
