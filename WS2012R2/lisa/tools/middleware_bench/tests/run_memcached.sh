@@ -36,7 +36,7 @@ USER="$2"
 PORT="11200"
 THREADS=(1 2 4 8 16 32 64 128 256 512)
 max_threads=16
-
+default_port=11200
 if [ -e /tmp/summary.log ]; then
     rm -rf /tmp/summary.log
 fi
