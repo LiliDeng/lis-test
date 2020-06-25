@@ -344,6 +344,7 @@ class AzureConnector:
         #delete_resource_group = self.resource_client.resource_groups.delete(self.group_name)
         try:
             #delete_resource_group.wait()
+            log.info("Resource group {} already removed".format(self.group_name))
         except CloudError as ce:
             log.info(ce)
             if 'AuthorizationFailed' in ce:
