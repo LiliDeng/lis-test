@@ -341,9 +341,9 @@ class AzureConnector:
         """
         log.info("Running teardown.")
         # Delete Resource group and everything in it
-        delete_resource_group = self.resource_client.resource_groups.delete(self.group_name)
+        #delete_resource_group = self.resource_client.resource_groups.delete(self.group_name)
         try:
-            delete_resource_group.wait()
+            #delete_resource_group.wait()
         except CloudError as ce:
             log.info(ce)
             if 'AuthorizationFailed' in ce:
